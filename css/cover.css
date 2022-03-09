@@ -100,7 +100,7 @@ html {
 body {
   display: -ms-flexbox;
   display: flex;
-  color: #fff;
+  color: #403737;
 }
 
 .cover-container {
@@ -343,7 +343,7 @@ header {
 
 .section5-table tr .check{
   color: white;
-  background-color: chocolate;
+  background-color: #efafaf;
   border-radius: 50px;
 }
 
@@ -422,7 +422,7 @@ header {
 .section7-button {
   font-family: NanumMyeongjo-b;
   font-size: 1.2rem;
-  background-color: #CC9999;
+  background-color: #ffb2b2;
   color: #fff;
   border: 0;
   border-radius: 50px;
@@ -432,19 +432,19 @@ header {
 }
 
 .section7-button:hover {
-  background-color: #CC9999;
+  background-color: #ffb2b2;
   color: #fff;
   border: 0;
 }
 
 .section7-button:active {
-  background-color: #996666;
+  background-color: #e5baba;
   color: #fff;
   border: 0;
 }
 
 .section7-button:valid {
-  background-color: #CC9999;
+  background-color: #ffb2b2;
   color: #fff;
   border: 0;
 }
