@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
     <meta name="description" content="박윤상 ❤️ 김혜윤 결혼식에 초대합니다.">
     <meta name="author" content="younsang park">
     <meta name="generator" content="Jekyll v4.1.1">
@@ -16,7 +18,13 @@
     <meta name="format-detection" content="telephone=no" />
     <title>박윤상, 김혜윤의 모바일 청첩장</title>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lightgallery.css" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lightgallery-bundle.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.css" crossorigin="anonymous">
+    
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -32,6 +40,11 @@
                 font-size: 3.5rem;
             }
         }
+
+        .gallery-item {
+            width: 200px;
+            padding: 5px;
+        }
     </style>
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
@@ -43,7 +56,7 @@
             crossorigin="anonymous"></script>
     <script src="js/wow.min.js"></script>
     <script>
-        var wow = new WOW(
+        const wow = new WOW(
             {
                 boxClass:     'wow',      // animated element css class (default is wow)
                 animateClass: 'animated', // animation css class (default is animated)
@@ -57,15 +70,20 @@
         wow.init();
 
         $(document).ready(function() {
-            let date = new Date(2022, 05, 01);
-            let currentDate = new Date();
+            const d_day_year = 2022;
+			const d_day_month = 05;
+			const d_day_day = 01;
+			const Dday = new Date(d_day_year, (d_day_month -1), (d_day_day+1));    // D-day(2017년 8월 30일)를 셋팅한다.
+			const now = new Date();                    // 현재(오늘) 날짜를 받아온다.
 
-            let result = date - currentDate;
-            let misec = 24 * 60 * 60 * 1000;
+			const gap = now - Dday;    // 현재 날짜에서 D-day의 차이를 구한다.
+			const result = Math.floor(gap / (1000 * 60 * 60 * 24) * -1);   // gap을 일(밀리초 * 초 * 분 * 시간)로 나눈다. 이 때 -1 을 곱해야 날짜차이가 맞게 나온다.
 
-            result = (result <= 0)? 0 : (parseInt(result / misec) + 1);
 
-            $("#d-day").html(result);
+			//document.write(Dday);
+			//document.write("남은 날은 " + result + " 일 입니다.");  
+
+			 $('#d-day').html(result);;
         });
     </script>
 </head>
@@ -105,8 +123,8 @@
         </div>14
         <div class="wow fadeInUp">
             <div class="section1-title section1-sub2">
-                박영호 · 임연이<span class="small">의&nbsp아들&nbsp&nbsp</span>박윤상<br/>
-                김승한 · 이경숙<span class="small">의&nbsp&nbsp&nbsp딸&nbsp&nbsp&nbsp</span>김혜윤
+                &nbsp;                박영호 · 임연이<span class="small">의&nbsp;&nbsp;장남&nbsp;&nbsp;</span>박윤상<br>&nbsp;
+                                김승한 · 이경숙<span class="small">의&nbsp;&nbsp;장녀&nbsp;&nbsp;</span>김혜윤
             </div>
             <br/><br/><br/><br/>
         </div>
@@ -129,7 +147,48 @@
         <br/><br/><br/><br/>
         <div class="section3 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <p class="wow fadeInUp section3-title section3-main">Gallery</p>
-            <div id="carouselExampleControls" class="wow fadeIn carousel slide section3-image" data-ride="carousel">
+
+            <div class="gallery-container d-flex align-items-center justify-content-center" id="gallery-container">
+
+                <a class="gallery-item" data-src="img/test/0.jpg">
+                  <img class="img-fluid" src="img/test/0.jpg" />
+                </a>
+                <a class="gallery-item" data-src="img/test/1.jpg">
+                    <img class="img-fluid" src="img/test/1.jpg" />
+                </a>
+                <a class="gallery-item" data-src="img/test/2.jpg">
+                    <img class="img-fluid" src="img/test/2.jpg" />
+                </a>
+                <a class="gallery-item" data-src="img/test/3.jpg">
+                    <img class="img-fluid" src="img/test/3.jpg" />
+                </a>
+                <a class="gallery-item" data-src="img/test/4.jpg">
+                    <img class="img-fluid" src="img/test/4.jpg" />
+                </a>
+                <a class="gallery-item" data-src="img/test/5.jpg">
+                    <img class="img-fluid" src="img/test/5.jpg" />
+                </a>
+                <a class="gallery-item" data-src="img/test/6.jpg">
+                    <img class="img-fluid" src="img/test/6.jpg" />
+                </a>
+                <a class="gallery-item" data-src="img/test/7.jpg">
+                    <img class="img-fluid" src="img/test/7.jpg" />
+                </a>
+                <a class="gallery-item" data-src="img/test/8.jpg">
+                    <img class="img-fluid" src="img/test/8.jpg" />
+                </a>
+                <a class="gallery-item" data-src="img/test/9.jpg">
+                    <img class="img-fluid" src="img/test/9.jpg" />
+                </a>
+                <a class="gallery-item" data-src="img/test/10.jpg">
+                    <img class="img-fluid" src="img/test/10.jpg" />
+                </a>
+                <a class="gallery-item" data-src="img/test/11.jpg">
+                    <img class="img-fluid" src="img/test/11.jpg" />
+                </a>                    
+              </div>
+
+            <!-- <div id="carouselExampleControls" class="wow fadeIn carousel slide section3-image" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="img/test/1.jpg" class="d-block w-100">
@@ -206,7 +265,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
-            </div>
+            </div> -->
             <br/><br/><br/>
         </div>
         <div class="wow fadeInUp">
@@ -414,12 +473,12 @@
             <script>
                 var mapContainer = document.getElementById('map'), // 지도를 표시할 div
                     mapOption = {
-                        center: new kakao.maps.LatLng(37.56170714301528, 126.85306609567687), // 지도의 중심좌표
+                        center: new kakao.maps.LatLng(35.8743956534157, 128.659657115395), // 지도의 중심좌표
                         level: 3 // 지도의 확대 레벨
                     };
 
                 var map = new kakao.maps.Map(mapContainer, mapOption);
-                var markerPosition  = new kakao.maps.LatLng(37.56170714301528, 126.85306609567687);
+                var markerPosition  = new kakao.maps.LatLng(35.8743956534157, 128.659657115395);
 
                 // 마커를 생성합니다
                 var marker = new kakao.maps.Marker({
@@ -502,5 +561,33 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script src="js/sakura.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/lightgallery.umd.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/plugins/zoom/lg-zoom.umd.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/plugins/thumbnail/lg-thumbnail.umd.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.js" crossorigin="anonymous"></script>
+
+<script>
+    $("#gallery-container")
+        .justifiedGallery({
+            captions: false,
+            lastRow: "hide",
+            rowHeight: 180,
+            margins: 5
+        })
+        .on("jg.complete", function () {
+            lightGallery(document.getElementById("gallery-container"), {
+                speed: 500,
+                thumbnail: true,
+                plugins: [lgZoom, lgThumbnail],
+                pager: false,
+                mobileSettings: {
+                    controls: false,
+                    showCloseIcon: true,
+                    download: true,
+                    rotate: false,
+                }
+            });
+        });
+</script>
 </body>
 </html>
