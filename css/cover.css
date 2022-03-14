@@ -453,6 +453,22 @@ header {
   background-color: #f9f9f9;
 }
 
+.section8-title {
+  margin-top: 1em;
+  color: #333;
+  text-shadow: none;
+}
+
+.section8-main {
+  font-family: DancingScript-b;
+  line-height: 1.5em;
+  font-size: 2rem;
+}
+
+.section9 {
+  background-color: #e7e7e7;
+}
+
 /*
  * Cover
  */

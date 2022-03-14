@@ -20,10 +20,13 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lightgallery.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lightgallery.css"
+        crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.css" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lightgallery-bundle.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lightgallery-bundle.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.css"
+        crossorigin="anonymous">
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -80,13 +83,13 @@
             margin: 0 auto;
             width: 100%;
             text-align: center;
-            padding: 0;
+            padding-bottom: 1.8em;
             overflow: hidden;
             position: relative;
         }
 
         .Bank_gb_Warp h2 {
-            font-size: 1.9em;
+            font-size: 1.65em;
             padding: 70px 0 0 0;
             font-family: NanumMyeongjo-b;
         }
@@ -135,7 +138,7 @@
 
         /* wedding_host - 211206 */
         .wedding-gb .wedding-host_item {
-            height: 280px;
+            height: 12em;
         }
 
         .wedding-host {
@@ -143,7 +146,7 @@
         }
 
         .wedding-host_item {
-            height: 250px;
+            height: 12em;
         }
 
         .bank {
@@ -151,8 +154,6 @@
             width: 100%;
             text-align: center;
         }
-
-        .bank a {}
 
         .bank a img {
             padding: 10px 15px;
@@ -162,8 +163,8 @@
         .bank_btn {
             display: inline-block;
             background: #4d4848;
-            margin: 30px 0 50px 0;
-            padding: 15px 30px;
+            margin: 0.85em;
+            padding: 1.5em 9em;
             border-radius: 50px;
         }
 
@@ -174,22 +175,22 @@
 
         @media all and (max-width: 460px) {
             .Bank_gb_Warp h2 {
-                font-size: 1.8em;
+                font-size: 1.65em;
                 padding: 50px 0 0 0;
             }
 
             .bank_gb h3 {
                 font-size: 1em;
-                padding: 50px 20px 20px 15px;
+                padding: 30px 20px 20px 15px;
             }
 
             .bank_btn {
-                margin: 30px 0 40px 0;
-                padding: 12px 20px;
+                margin: 0.85em;
+                padding: 1.3em 5.8em;
             }
 
             .bank_btn a {
-                font-size: 0.85em;
+                font-size: 1em;
             }
 
         }
@@ -201,7 +202,7 @@
             }
 
             .bank_gb h3 {
-                font-size: 1.1em;
+                font-size: 1em;
             }
 
             .bank_btn:nth-child(1),
@@ -221,6 +222,185 @@
                 line-height: 1.8;
             }
 
+        }
+
+        .call dl {
+            width: 100%;
+            padding: 10px 0 10px 0;
+        }
+
+        .call dl:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .call dl.wife {
+            padding-bottom: 30px;
+        }
+
+        .call dl dt {
+            float: left;
+            margin-top: 4%;
+            width: 56%;
+            padding: 0px;
+            font-size: 1.15rem;
+        }
+
+        .call dl dt span.blue {
+            font-weight: 400;
+            color: #121329;
+            margin-right: 5%;
+        }
+
+        .call dl dt span.pink {
+            font-weight: normal;
+            color: #121329;
+            margin-right: 5%;
+        }
+
+        .call dl dd {
+            padding: 0px 2.35em;
+            width: 12%;
+            float: left;
+            margin-top: 3%;
+        }
+
+        .scroll_off {
+            height: 100%;
+            min-height: 100%;
+            overflow: hidden !important;
+            touch-action: none;
+        }
+
+        .account_pop {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            text-align: center;
+        }
+
+        .account_pop:before {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .account_pop .layer_pop {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 450px;
+            width: 90%;
+            height: auto;
+            background: #fff;
+            z-index: 1000;
+            padding: 0 10px;
+            border: 1px solid #ebebeb;
+            box-sizing: border-box;
+            margin: auto;
+            text-align: left;
+        }
+
+        .account_pop .layer_pop .account_list {
+            max-height: 480px;
+            overflow-y: auto;
+            padding: 24px 10px 0;
+        }
+
+        .account_pop .layer_pop .account_list .mCSB_scrollTools {
+            width: 4px;
+        }
+
+        .account_pop .layer_pop .account_list .mCSB_scrollTools .mCSB_draggerRail {
+            background: #f1f1f1;
+        }
+
+        .account_pop .layer_pop .account_list .mCSB_scrollTools .mCSB_dragger_bar {
+            background: #ccc;
+        }
+
+        .account_pop .layer_pop .account_list .mCSB_container {
+            margin-right: 0;
+        }
+
+        .account_pop .layer_pop .account_list.add_scroll {
+            padding: 24px 0 0 10px;
+        }
+
+        .account_pop .layer_pop .account_list.add_scroll .mCSB_container {
+            margin-right: 16px;
+        }
+
+        .account_pop .layer_pop dl {
+            margin-bottom: 24px;
+        }
+
+        .account_pop .layer_pop dl dt {
+            position: relative;
+            font-size: 16px !important;
+            line-height: 24px;
+            border-bottom: 1px solid #ebebeb;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            font-family: "Spoqa Han Sans Neo", sans-serif;
+            color: #333;
+        }
+
+        .account_pop .layer_pop dl dt .copy_btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 66px;
+            height: 22px;
+            line-height: 22px;
+            background: #757575;
+            font-size: 12px !important;
+            color: #fff;
+            text-align: center;
+            border-radius: 20px;
+            font-family: "Noto Sans Kr", sans-serif;
+        }
+
+        .account_pop .layer_pop dl dd {
+            font-size: 16px;
+            line-height: 24px;
+            color: #757575;
+            font-family: "Spoqa Han Sans Neo", sans-serif;
+            font-weight: 300;
+        }
+
+        .account_pop .layer_pop dl dd span {
+            color: inherit;
+        }
+
+        .account_pop .layer_pop .btn_wrap {
+            margin-top: 32px;
+            padding: 0 10px 24px;
+        }
+
+        .account_pop .layer_pop .btn_wrap .btn {
+            width: 100%;
+            height: 45px;
+            line-height: 45px;
+            background: #98a3f4;
+            color: #fff;
+            padding: 0;
+            font-family: "Noto Sans Kr", sans-serif;
+        }
+
+        .account_pop .pop_mask {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.3);
         }
     </style>
     <!-- Custom styles for this template -->
@@ -281,7 +461,7 @@
             <p class="top-title">박윤상 · 김혜윤</p>
             <p class="top-title-sub">5월 1일 일요일 오후 2시</p>
             <p class="top-title-sub">호텔 인터불고 대구(만촌) 파크빌리지</p>
-            <br/><br/><br/>
+            <br/>
             <hr class="cover-container"/>
             <br/>
         </div>
@@ -303,25 +483,8 @@
                 &nbsp;                박영호 · 임연이<span class="small">의&nbsp;&nbsp;장남&nbsp;&nbsp;</span>박윤상<br>&nbsp;
                                 김승한 · 이경숙<span class="small">의&nbsp;&nbsp;장녀&nbsp;&nbsp;</span>김혜윤
             </div>
-            <br/><br/><br/><br/>
+            <br/><br/><br/>
         </div>
-        <!-- <hr class="cover-container"/> -->
-        <!-- <br/>
-        <p class="wow fadeInUp section2-title section2-main inner cover cover-container d-flex w-100 h-100 p-5 mx-auto flex-column">
-            축하해 주시는<br/>
-            모든 분들에게
-        </p>
-        <p class="wow fadeInUp section2-title section2-sub inner cover cover-container d-flex w-100 h-100 p-2 mx-auto flex-column">
-            사랑으로 물들어가는 계절,<br/>
-            연인에서 부부라는 이름으로<br/>
-            평생을 함께 하고자 합니다.<br/>
-            귀한 걸음 하시어<br/>
-            두 사람의 언약을 지켜봐 주시면<br/>
-            더 없는 기쁨으로 간직하겠습니다.
-            <br/><br/>
-            신랑 박윤상 · 신부 김혜윤 올림
-        </p>
-        <br/><br/><br/><br/> -->
         <div class="section3 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <p class="wow fadeInUp section3-title section3-main">Gallery</p>
 
@@ -366,85 +529,28 @@
               </div>
             <br/><br/><br/>
         </div>
+
         <div class="wow fadeInUp section7 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <div class="Bank_gb_Warp">
-
-                <h2>마음 전하실 곳</h2>
-                <div class="map_add">
+                <div class="call">
+                    <dl class="husband">
+                        <dt>
+                            신랑
+                            <span class="blue">에게 연락하기</span>
+                        </dt>
+                        <dd><a href="tel:010-3329-2692" class="at_Groom_Phone"><img src="img/phone_icon.png" alt="전화 아이콘"></a></dd>
+                        <dd><a href="sms:010-3329-2692" class="as_Groom_Phone"><img src="img/messg_icon.png" alt="SMS 아이콘"></a></dd>
+                    </dl>
+                    <dl class="wife">
+                        <dt>
+                            신부
+                            <span class="blue">에게 연락하기</span>
+                        </dt>
+                        <dd><a href="tel:010-6677-7507" class="at_Bride_Phone"><img src="img/phone_icon.png" alt="전화 아이콘"></a></dd>
+                        <dd><a href="sms:010-6677-7507" class="as_Bride_Phone"><img src="img/messg_icon.png" alt="SMS 아이콘"></a></dd>
+                    </dl>
                 </div>
 
-                <div class="bank_groom_bride">
-                    <div class="bank_gb wedding-gb">
-                        <div class="wedding-host_item">
-                            <h3>신랑 <span>박윤상</span></h3>
-                            <div class="bank">
-                                <a href="tel:010-3329-2695"><img src="img/phone_icon.png" alt=""></a>
-                                <a href="sms:010-3329-2695"><img src="img/messg_icon.png" alt=""></a>
-                            </div>
-                            <div class="bank_btn">
-                                <a data-toggle="modal" data-target="#yspark_bank" href="#yspark_bank" rel="modal:open">계좌번호 확인</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bank_gb wedding-gb">
-                        <div class="wedding-host_item">
-                            <h3>신부 <span>김혜윤</span></h3>
-                            <div class="bank">
-                                <a href="tel:010-6677-7507"><img src="img/phone_icon.png" alt=""></a>
-                                <a href="sms:010-6677-7507"><img src="img/messg_icon.png" alt=""></a>
-                            </div>
-                            <div class="bank_btn">
-                                <a data-toggle="modal" data-target="#hykim_bank" href="#hykim_bank" rel="modal:open">계좌번호 확인</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal fade" id="yspark_bank" tabindex="-1" aria-labelledby="yspark_bank" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title section7-modal section7-modal-title" id="groomLabel">신랑 계좌번호 보기</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body section7-modal section7-modal-content">
-                                <p id="yspark_banknum">기업 695-018128-01-12 박윤상</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" onclick="copyToClipboard('yspark_banknum')" class="btn btn-secondary">복사하기</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="modal fade" id="hykim_bank" tabindex="-1" aria-labelledby="hykim_bank" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title section7-modal section7-modal-title" id="groomLabel">신부 계좌번호 보기</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body section7-modal section7-modal-content">
-                                <p id="hykim_banknum">신한 110-383-411475 김혜윤</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" onclick="copyToClipboard('hykim_banknum')" class="btn btn-secondary">복사하기</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="wow fadeInUp section7 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            <div class="Bank_gb_Warp">
-                <h2>혼주에게 연락하기</h2>
                 <div class="bank_groom_bride">
                     <div class="bank_gb wedding-host">
                         <div class="wedding-host_item">
@@ -453,18 +559,12 @@
                                 <a href="tel:010-4300-5038"><img src="img/phone_icon.png" alt=""></a>
                                 <a href="sms:010-4300-5038"><img src="img/messg_icon.png" alt=""></a>
                             </div>
-                            <div class="bank_btn">
-                                <a data-toggle="modal" data-target="#groom_f" href="#groom_f" rel="modal:open">계좌번호 확인</a>
-                            </div>
                         </div>
                         <div class="wedding-host_item">
                             <h3 class="wedding-host_mom">신랑 어머니<br> <span>임연이</span></h3>
                             <div class="bank">
                                 <a href="tel:010-5317-5038"><img src="img/phone_icon.png" alt=""></a>
                                 <a href="sms:010-5317-5038"><img src="img/messg_icon.png" alt=""></a>
-                            </div>
-                            <div class="bank_btn">
-                                <a data-toggle="modal" data-target="#groom_m" href="#groom_m" rel="modal:open">계좌번호 확인</a>
                             </div>
                         </div>
                     </div>
@@ -476,9 +576,6 @@
                                 <a href="tel:010-4436-7507"><img src="img/phone_icon.png" alt=""></a>
                                 <a href="sms:010-4436-7507"><img src="img/messg_icon.png" alt=""></a>
                             </div>
-                            <div class="bank_btn">
-                                <a data-toggle="modal" data-target="#bride_f" href="#bride_f" rel="modal:open">계좌번호 확인</a>
-                            </div>
                         </div>
                         <div class="wedding-host_item">
                             <h3 class="wedding-host_mom">신부 어머니<br> <span>이경숙</span></h3>
@@ -486,93 +583,11 @@
                                 <a href="tel:010-6587-7507"><img src="img/phone_icon.png" alt=""></a>
                                 <a href="sms:010-6587-7507"><img src="img/messg_icon.png" alt=""></a>
                             </div>
-                            <div class="bank_btn">
-                                <a data-toggle="modal" data-target="#bride_m" href="#bride_m" rel="modal:open">계좌번호 확인</a>
-                            </div>
                         </div>
                     </div>
 
                 </div>
              </div>
-
-             <div class="modal fade" id="groom_f" tabindex="-1" aria-labelledby="groom_f" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title section7-modal section7-modal-title" id="groomLabel">신랑 혼주 계좌번호 보기</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body section7-modal section7-modal-content">
-                            <p id="m_mother_banknum">농협 112-12-047356 박영호</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" onclick="copyToClipboard('m_mother_banknum')" class="btn btn-secondary">복사하기</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="groom_m" tabindex="-1" aria-labelledby="groom_m" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title section7-modal section7-modal-title" id="groomLabel">신랑 혼주 계좌번호 보기</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body section7-modal section7-modal-content">
-                            <p id="m_mother_banknum">농협 112-02-179386 임연이</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" onclick="copyToClipboard('m_mother_banknum')" class="btn btn-secondary">복사하기</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="bride_f" tabindex="-1" aria-labelledby="bride_f" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title section7-modal section7-modal-title" id="brideLabel">신부 혼주 계좌번호 보기</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body section7-modal section7-modal-content">
-                            <p id="w_father_banknum">대구은행 075-08-222029 김승한</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" onclick="copyToClipboard('w_father_banknum')" class="btn btn-secondary">복사하기</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="bride_m" tabindex="-1" aria-labelledby="bride_m" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title section7-modal section7-modal-title" id="brideLabel">신부 혼주 계좌번호 보기</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body section7-modal section7-modal-content">
-                            <p id="w_mother_banknum">대구은행 047-07-059584 이경숙</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" onclick="copyToClipboard('w_mother_banknum')" class="btn btn-secondary">복사하기</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="wow fadeInUp section5 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <br/>
@@ -641,7 +656,7 @@
             <br/><br/>
             <p class="wow fadeInUp section6-title section6-main">Location</p>
             <div class="wow fadeInUp  section6-title">
-                <p class="section6-location-main" style="margin-bottom: 0;">호텔 인터불고 대구(만촌)(파크빌리지)</p>
+                <p class="section6-location-main" style="margin-bottom: 0;">호텔 인터불고 대구(만촌) 파크빌리지</p>
                 <p class="section6-location-sub" style="text-align: center;">
                     대구 수성구 팔현길 212
                 </p>
@@ -676,12 +691,12 @@
             <script>
                 var mapContainer = document.getElementById('map'), // 지도를 표시할 div
                     mapOption = {
-                        center: new kakao.maps.LatLng(35.8743956534157, 128.659657115395), // 지도의 중심좌표
-                        level: 3 // 지도의 확대 레벨
+                        center: new kakao.maps.LatLng(35.8726864166372, 128.65981122757694), // 지도의 중심좌표
+                        level: 4 // 지도의 확대 레벨
                     };
 
                 var map = new kakao.maps.Map(mapContainer, mapOption);
-                var markerPosition  = new kakao.maps.LatLng(35.8743956534157, 128.659657115395);
+                var markerPosition  = new kakao.maps.LatLng(35.8726864166372, 128.65981122757694);
 
                 // 마커를 생성합니다
                 var marker = new kakao.maps.Marker({
@@ -692,7 +707,135 @@
                 marker.setMap(map);
             </script>
         </div>
-        <footer class="pt-5 text-muted text-center text-small section8">
+        <div class="wow fadeInUp section8 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <div class="Bank_gb_Warp">
+                <h2>마음 전하실 곳</h2>
+                <br>
+                <div class="bank_btn">
+                    <a class="groom">신랑측 계좌번호 확인</a>
+                </div>
+                <div class="bank_btn">
+                    <a class="bride">신부측 계좌번호 확인</a>
+                </div>
+            </div>
+
+            <div class="account_pop groom" style="display: none;">
+                <div class="layer_pop">
+                    <div class="account_list groom">
+                        <dl id="dl_groom_1">
+                            <dt><span id="inputGroomSender_1" class="input_groom_sender">신랑 아버지 계좌번호 보기</span><a
+                                    href="javascript:;" class="copy_btn groom" idx="1">복사하기</a></dt>
+                            <dd><span id="inputGroomBank_1" class="input_groom_bank">NH농협</span>&nbsp;&nbsp;(예금주 : <span
+                                    id="inputGroomAccountHolder_1" class="input_groom_accountholder">박영호</span>)</dd>
+                            <dd><span id="inputGroomAccountNumber_1" class="input_groom_accountnumber">112-12-047356</span>
+                            </dd>
+                        </dl>
+                        <dl id="dl_groom_2">
+                            <dt><span id="inputGroomSender_2" class="input_groom_sender">신랑 어머니 계좌번호 보기</span>
+                                <a href="javascript:;" class="copy_btn groom" idx="2">복사하기</a></dt>
+                            <dd><span id="inputGroomBank_2" class="input_groom_bank">NH농협</span>&nbsp;&nbsp;(예금주 : <span
+                                    id="inputGroomAccountHolder_2" class="input_groom_accountholder">임연이</span>)</dd>
+                            <dd><span id="inputGroomAccountNumber_2" class="input_groom_accountnumber">112-02-179386</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="btn_wrap type01">
+                        <a href="javascript:accClose();" class="btn">닫기</a>
+                    </div>
+                </div>
+                <div class="pop_mask"></div>
+            </div>
+            <div class="account_pop bride" style="display: none;">
+                <div class="layer_pop">
+                    <div class="account_list bride">
+                        <dl id="dl_bride_1">
+                            <dt><span id="inputBrideSender_1" class="input_bride_sender">신부 아버지 계좌번호 보기</span><a
+                                    href="javascript:;" class="copy_btn bride" idx="1">복사하기</a></dt>
+                            <dd><span id="inputBrideBank_1" class="input_bride_bank">대구은행</span>&nbsp;&nbsp;(예금주 : <span
+                                    id="inputBrideAccountHolder_1" class="input_bride_accountholder">김승한</span>)</dd>
+                            <dd><span id="inputBrideAccountNumber_1" class="input_bride_accountnumber">075-08-222029</span>
+                            </dd>
+                        </dl>
+                        <dl id="dl_bride_2">
+                            <dt><span id="inputBrideSender_2" class="input_bride_sender">신부 어머니 계좌번호 보기</span><a
+                                    href="javascript:;" class="copy_btn bride" idx="2">복사하기</a></dt>
+                            <dd><span id="inputBrideBank_2" class="input_bride_bank">대구은행</span>&nbsp;&nbsp;(예금주 : <span
+                                    id="inputBrideAccountHolder_2" class="input_bride_accountholder">이경숙</span>)</dd>
+                            <dd><span id="inputBrideAccountNumber_2" class="input_bride_accountnumber">047-07-059584</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="btn_wrap type01">
+                        <a href="javascript:accClose();" class="btn">닫기</a>
+                    </div>
+                    <!-- 복사하기 안내문구 -->
+                    <div class="toast bride"></div>
+                </div>
+                <div class="pop_mask"></div>
+            </div>
+    
+            <script>
+                function accClose() {
+                    $('.account_pop').hide();
+                    scrollAble();
+                }
+    
+                function scrollDisable() {
+                    $('body').addClass('scroll_off').on('scroll touchmove mousewheel');
+                }
+                //스크롤 방지해제 이벤트
+                function scrollAble() {
+                    $('body').removeClass('scroll_off').off('scroll touchmove mousewheel');
+                }
+    
+                function fn_AccountClose() {
+                    $('.account_pop.groom').hide();
+                    $('.account_pop.bride').hide();
+                    $('.account_pop.account').hide();
+                    scrollDisable();
+                }
+    
+                $('a.groom').on('click', function () {
+                    fn_AccountClose();
+                    $('.account_pop.groom').show();
+                });
+    
+                $('a.bride').on('click', function () {
+                    fn_AccountClose();
+                    $('.account_pop.bride').show();
+                });
+    
+                $('.copy_btn.groom').on('click', function () {
+                    const idx = $(this).attr('idx');
+                    const account_number = $("#inputGroomAccountNumber_" + idx).text();
+                    copyToClipboard(account_number);
+
+                    //복사완료 문구
+                    alert("복사되었습니다, 감사합니다.");
+                });
+
+                $('.copy_btn.bride').on('click', function () {
+                    const idx = $(this).attr('idx');
+                    const account_number = $("#inputBrideAccountNumber_" + idx).text();
+                    copyToClipboard(account_number);
+
+                    //복사완료 문구
+                    alert("복사되었습니다, 감사합니다.");
+                });
+    
+                function copyToClipboard(text) {
+                    const aux = document.createElement("textarea");
+                    aux.value = text;
+                    document.body.appendChild(aux);
+                    aux.select();
+                    aux.setSelectionRange(0, 9999);
+                    document.execCommand("copy");
+                    document.body.removeChild(aux);
+                }
+            </script>
+        </div>
+
+        <footer class="pt-5 text-muted text-center text-small section9">
             <p class="mb-1">© 2022-05-01 Younsang, Hyeyun</p>
             <br/><br/>
             <br/><br/>
@@ -730,18 +873,6 @@
                 }
             });
         });
-
-
-    function copyToClipboard(elementId) {
-        var tempElem = document.createElement('textarea');
-        tempElem.value = document.getElementById('yspark_banknum').innerText;  
-        document.body.appendChild(tempElem);
-
-        tempElem.select();
-        document.execCommand("copy");
-        document.body.removeChild(tempElem);
-        alert("복사되었습니다, 감사합니다.");        
-    }
 </script>
 </body>
 </html>
